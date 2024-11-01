@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Beethoven_ElMaestro", "Synapse")
+
+local player = game.Players.LocalPlayer
+local money = player:WaitForChild("leaderstats"):WaitForChild("Money")
+
+local Tab = Window:NewTab("Argent")
+local Section = Tab:NewSection("Gestion de l'Argent")
+
+Section:NewButton("Donner 10 000", "Ajoute 10 000 à votre argent", function()
+    money.Value = money.Value + 10000
+end)
+
+Section:NewButton("Donner 100 000", "Ajoute 100 000 à votre argent", function()
+    money.Value = money.Value + 100000
+end)
+
+Section:NewButton("Donner 1 000 000", "Ajoute 1 000 000 à votre argent", function()
+    money.Value = money.Value + 1000000
+
+end)
